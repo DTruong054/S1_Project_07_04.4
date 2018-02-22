@@ -11,7 +11,7 @@ function processInput() {
    }
    else { // add entered value to array and write results to document
       document.getElementById("resultsExpl").innerHTML = "You entered the following places:";
-      var listItem = "";
+      var listItem = ""; //The problem here was that strict mode was enabled. This mode needs you to have var infront of every variable.
       for (j = 1; j < 6; j++) { // write each array element to its corresponding list item
          listItem = "item" + j;
          document.getElementById(listItem).innerHTML = places[j];
